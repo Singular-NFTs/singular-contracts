@@ -1,0 +1,15 @@
+{
+    "editor.formatOnSave": true,
+    "solidity.formatter": "forge",
+    "solidity.linter": "solhint",
+    "solidity.remappingsUnix": [
+        "forge-std/=lib/forge-std/src/",
+        "@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        "@contracts/=src/",
+        "@config/=src/config/",
+        "@constants/=src/constants/",
+        "@scripts/=script/",
+        "@utils/=src/utils/",
+    ],
+    "solidity.defaultCompiler": "remote"
+}
