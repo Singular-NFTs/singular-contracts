@@ -4,7 +4,7 @@ set export
 # contract deployments
 deploy_earthmind_nft JSON_RPC_URL SENDER:
     echo "Deploying EarthMind NFT"
-    forge script script/v1/001_EarthMind_Deploy.s.sol:EarthMindDeployScript --rpc-url $JSON_RPC_URL --sender $SENDER --broadcast --ffi -vvvv
+    forge script script/v1/001_EarthMind_Deploy.s.sol:EarthMindDeployScript --rpc-url $JSON_RPC_URL --sender $SENDER --broadcast --verify --ffi -vvvv
 
 deploy_local:
     echo "Deploying contracts locally"
@@ -17,6 +17,11 @@ deploy_sepolia:
 deploy_mainnet:
     echo "Deploying contracts to Mainnet"
     NETWORK_ID=$CHAIN_ID_MAINNET MNEMONIC=$MNEMONIC_MAINNET just deploy_earthmind_nft $RPC_URL_MAINNET $SENDER_MAINNET
+
+# contract interactions
+request_and_approve: # used to request and approve NFT in Sepolia testnet
+    echo "Requesting and approving NFT"
+    NETWORK_ID=$CHAIN_ID_SEPOLIA MNEMONIC=$MNEMONIC_SEPOLIA forge script script/v1/Request_And_Approve.s.sol:RequestAndApproveScript --rpc-url $RPC_URL_SEPOLIA --sender $SENDER_SEPOLIA --broadcast --ffi -vvvv
 
 # orchestration and testing
 test_unit:
