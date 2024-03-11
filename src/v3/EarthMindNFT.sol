@@ -6,9 +6,9 @@ import {ReentrancyGuard} from "@openzeppelin/security/ReentrancyGuard.sol";
 import {Ownable} from "@openzeppelin/access/Ownable.sol";
 import {Strings} from "@openzeppelin/utils/Strings.sol";
 
-import "./Errors.sol";
+import "../Errors.sol";
 
-contract EarthMind1155 is ERC1155, Ownable, ReentrancyGuard {
+contract EarthMindNFT is ERC1155, Ownable, ReentrancyGuard {
     using Strings for uint256;
 
     struct Collection {

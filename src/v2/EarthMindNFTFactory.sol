@@ -4,9 +4,9 @@ pragma solidity 0.8.19;
 import {ReentrancyGuard} from "@openzeppelin/security/ReentrancyGuard.sol";
 import {Ownable} from "@openzeppelin/access/Ownable.sol";
 
-import {EarthMind721} from "./EarthMind721.sol";
+import {EarthMindNFT} from "./EarthMindNFT.sol";
 
-import "./Errors.sol";
+import "../Errors.sol";
 
 contract EarthMindNFTFactory is Ownable, ReentrancyGuard {
     struct Collection {
@@ -14,7 +14,7 @@ contract EarthMindNFTFactory is Ownable, ReentrancyGuard {
         string name;
         string symbol;
         uint256 itemCount;
-        EarthMind721 collectionInstance;
+        EarthMindNFT collectionInstance;
     }
 
     struct ItemRequest {
@@ -176,7 +176,7 @@ contract EarthMindNFTFactory is Ownable, ReentrancyGuard {
 
         itemRequests[_requestId].approved = true;
 
-        EarthMind721 collectionInstance = collections[_collectionId].collectionInstance;
+        EarthMindNFT collectionInstance = collections[_collectionId].collectionInstance;
 
         collectionInstance.mintNFT(itemId, msg.sender, itemRequestInstance.metadataURI);
 
@@ -194,7 +194,7 @@ contract EarthMindNFTFactory is Ownable, ReentrancyGuard {
     }
 
     function _createCollection(string memory _name, string memory _symbol, uint256 _feePaid) internal {
-        EarthMind721 newCollection = new EarthMind721(_name, _symbol);
+        EarthMindNFT newCollection = new EarthMindNFT(_name, _symbol);
         _nextCollectionId++;
         activeCollectionId = _nextCollectionId;
         collections[_nextCollectionId] = Collection({

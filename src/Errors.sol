@@ -22,3 +22,5 @@ error ItemRequestAlreadyApproved();
 error ItemRequestNotFound();
 
 error CollectionNotActive();
+
+error ItemRequestAlreadyExists();

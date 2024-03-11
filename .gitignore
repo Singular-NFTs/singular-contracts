@@ -12,3 +12,11 @@ docs/
 
 # Dotenv file
 .env
+
+# Mac OS
+.DS_Store
+TODO.md
+
+# Coverage
+coverage/
+lcov.info
