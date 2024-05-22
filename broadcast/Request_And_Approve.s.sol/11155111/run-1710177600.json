@@ -1,0 +1,60 @@
+{
+  "transactions": [
+    {
+      "hash": "0x05c21576d2862d2503ab828f2c939c97665408abb8c42ee8075e356a43a26f57",
+      "transactionType": "CALL",
+      "contractName": "EarthMindNFT",
+      "contractAddress": "0x928eE2dd8Bf2A2f9f9d5687F2Fcf0c35898254fb",
+      "function": "requestAddItemToCollection(string,string)",
+      "arguments": [
+        "\"ipfs://QmdiZADNgiJwi6i6qQ3QwWMA6iq77dbHwDof8ukNPaAZDL\"",
+        "\"sample prompt\""
+      ],
+      "transaction": {
+        "type": "0x02",
+        "from": "0x23bf95de9f90338f973056351c8cd2cb78cbe52f",
+        "to": "0x928ee2dd8bf2a2f9f9d5687f2fcf0c35898254fb",
+        "gas": "0x389c9",
+        "value": "0x2386f26fc10000",
+        "data": "0x6303d57f000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000035697066733a2f2f516d64695a41444e67694a77693669367151335177574d41366971373764624877446f6638756b4e5061415a444c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000d73616d706c652070726f6d707400000000000000000000000000000000000000",
+        "nonce": "0x2",
+        "accessList": []
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    },
+    {
+      "hash": "0x2455e2dce7dfe4a87ea8c67e2fce384c656e49cf1f2e752e9d3483eedbfa86c6",
+      "transactionType": "CALL",
+      "contractName": "EarthMindNFT",
+      "contractAddress": "0x928eE2dd8Bf2A2f9f9d5687F2Fcf0c35898254fb",
+      "function": "approveItemAddition(bytes32)",
+      "arguments": [
+        "0xb44f3704dde021ae42f528c6666909a11b99e2b8c0dca5cc585c16eba392bb4e"
+      ],
+      "transaction": {
+        "type": "0x02",
+        "from": "0x23bf95de9f90338f973056351c8cd2cb78cbe52f",
+        "to": "0x928ee2dd8bf2a2f9f9d5687f2fcf0c35898254fb",
+        "gas": "0x3f587",
+        "value": "0x0",
+        "data": "0xb4e32497b44f3704dde021ae42f528c6666909a11b99e2b8c0dca5cc585c16eba392bb4e",
+        "nonce": "0x3",
+        "accessList": []
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0x05c21576d2862d2503ab828f2c939c97665408abb8c42ee8075e356a43a26f57",
+    "0x2455e2dce7dfe4a87ea8c67e2fce384c656e49cf1f2e752e9d3483eedbfa86c6"
+  ],
+  "returns": {},
+  "timestamp": 1710177600,
+  "chain": 11155111,
+  "multi": false,
+  "commit": "3ba047a"
+}
